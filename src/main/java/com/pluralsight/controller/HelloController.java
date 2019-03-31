@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {
-    @RequestMapping(value = "/greeting")
+    @RequestMapping(value = "/greetings")//which method handles which request
     public String sayHello(Model model){
         model.addAttribute("greeting", "Hello World!");
         return "hello"; //go to hello.jsp page
