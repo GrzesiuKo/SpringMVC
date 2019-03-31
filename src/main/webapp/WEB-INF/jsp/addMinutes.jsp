@@ -13,6 +13,7 @@
     <title>Add Minutes</title>
 </head>
 <body>
+Language : <a href="?language=en">English</a> | <a href="?language=es">Spanish</a>
 <form:form modelAttribute="exercise">
     <table>
         <tr>

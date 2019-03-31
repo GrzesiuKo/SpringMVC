@@ -10,6 +10,12 @@
     <mvc:resources mapping="/pdfs/**" location="/pdfs/"/>
     <context:component-scan base-package="com.pluralsight"/>
 
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="language"/>
+        <!--paramname 'language' the same as in '?language=en'-->
+    </mvc:interceptors>
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" p:defaultLocale="en"/>
+<!--for english-->
     <!--<bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">-->
         <!--<property name="prefix" value="/WEB-INF/jsp/"/>-->
          <!--<property name="suffix" value=".jsp"/>-->
