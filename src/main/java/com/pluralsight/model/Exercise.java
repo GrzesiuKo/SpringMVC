@@ -1,9 +1,14 @@
 package com.pluralsight.model;
 
 
-public class Exercise {
+import org.hibernate.validator.constraints.Range;
 
+import javax.validation.constraints.NotNull;
+
+public class Exercise {
+    @Range(min = 1, max = 120)
     private int minutes;
+    @NotNull
     private String activity;
 
     public String getActivity() {
