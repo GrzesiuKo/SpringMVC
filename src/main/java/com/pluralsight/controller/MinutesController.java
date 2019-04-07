@@ -17,6 +17,8 @@ public class MinutesController {
     public String addMinutes(@ModelAttribute("exercise") Exercise exercise){
 
         System.out.println("exercise: "+exercise.getMinutes());
+        System.out.println("Activity: "+exercise.getActivity());
+
 
         return "addMinutes";
     }
